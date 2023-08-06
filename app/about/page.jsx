@@ -16,11 +16,11 @@ const aboutData = [
     info: [
       {
         title: 'Web Development',
-        icons: [<FaHtml5 />, <FaCss3 />, <FaJs />, <FaReact />, <SiNextdotjs />, <SiFramer />, <FaWordpress />]
+        icons: [<FaHtml5 key={1} />, <FaCss3 key={2} />, <FaJs key={3} />, <FaReact key={3} />, <SiNextdotjs key={4} />, <SiFramer key={5} />, <FaWordpress key={6} />]
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />]
+        icons: [<FaFigma key={1} />, <SiAdobexd key={2} />, <SiAdobephotoshop key={3} />]
       }
     ]
   },
