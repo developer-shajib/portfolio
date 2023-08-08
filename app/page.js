@@ -31,7 +31,7 @@ export default function Home() {
             </motion.h1>
             {/* <!-- subtitle --> */}
             <motion.p
-              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
+              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 z-10'
               variants={fadeIn('down', 0.3)}
               initial='hidden'
               animate='show'

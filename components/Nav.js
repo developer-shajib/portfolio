@@ -1,15 +1,18 @@
 'use client';
 import Link from 'next/link.js';
-import { HiChatBubbleBottomCenterText, HiEnvelope, HiHome, HiRectangleGroup, HiUser, HiViewColumns } from 'react-icons/hi2';
+import { HiEnvelope, HiHome, HiUser, HiViewColumns } from 'react-icons/hi2';
+import { FaHeadSideVirus } from 'react-icons/fa';
+import { MdMiscellaneousServices } from 'react-icons/md';
+import { BsGrid1X2Fill } from 'react-icons/bs';
 import { usePathname } from 'next/navigation';
 
 //  links
 const links = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'skill', path: '/skill', icon: <HiChatBubbleBottomCenterText /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-  { name: 'project', path: '/project', icon: <HiViewColumns /> },
+  { name: 'skill', path: '/skill', icon: <FaHeadSideVirus /> },
+  { name: 'services', path: '/services', icon: <MdMiscellaneousServices /> },
+  { name: 'project', path: '/project', icon: <BsGrid1X2Fill /> },
   { name: 'contact', path: '/contact', icon: <HiEnvelope /> }
 ];
 
