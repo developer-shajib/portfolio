@@ -6,13 +6,14 @@ import Circles from '@/components/Circles.js';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/variants.js';
 
-const Work = () => {
+const Project = () => {
   return (
     <>
       <div className='h-full bg-primary/30 pt-44 px-6 flex items-center'>
         <Circles />
         <div className='container mx-auto'>
           <div className='flex flex-col xl:flex-row gap-x-4'>
+            
             {/* <!-- text --> */}
             <div className='text-center flex xl:w-[30vw flex-col lg:text-left mb-4 xl:mb-0 '>
               <motion.h2
@@ -21,7 +22,7 @@ const Work = () => {
                 animate='show'
                 exit='hidden'
                 className='h2 xl:mt-12'>
-                My work <span className='text-accent'>.</span>
+                My Project <span className='text-accent'>.</span>
               </motion.h2>
               <motion.p
                 variants={fadeIn('up', 0.4)}
@@ -51,4 +52,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Project;

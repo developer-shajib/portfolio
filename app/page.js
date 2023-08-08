@@ -1,10 +1,9 @@
 'use client';
-import Image from 'next/image';
 import { fadeIn } from '@/variants.js';
-import ProjectsBtn from '@/components/ProjectsBtn.js';
 import { motion } from 'framer-motion';
 import Avatar from '@/components/Avatar.js';
-import ParticlesContainer from '@/components/ParticlesContainer.js';
+import HomeBtn from '@/components/HomeBtn.js';
+import Typed from 'react-typed';
 
 export default function Home() {
   return (
@@ -15,13 +14,20 @@ export default function Home() {
           <div className='text-center flex flex-col justify-center xl:pt-24 xl:text-left h-full container mx-auto'>
             {/* <!-- title --> */}
             <motion.h1
-              className='h1'
+              className='h1 z-10'
               variants={fadeIn('right', 0.2)}
               initial='hidden'
               animate='show'
               exit='hidden'>
-              Transforming ideas <br /> Into
-              <span className='text-accent'> Digital Reality</span>
+              Hi, I am
+              <br />
+              <span className='text-accent'>
+                <Typed
+                  strings={['Shajibul Islam.', 'A MERN Stack Developer', 'use all latest technology in my project', 'Looking a job as a MERN stack.', 'Complete some MERN Project very professionally.', 'write professional & clean code.']}
+                  typeSpeed={40}
+                  loop
+                />
+              </span>
             </motion.h1>
             {/* <!-- subtitle --> */}
             <motion.p
@@ -30,12 +36,12 @@ export default function Home() {
               initial='hidden'
               animate='show'
               exit='hidden'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores inventore possimus odio? Quia omnis nulla alias quae quas repellat commodi odio.
+              I am studying in computer science and engineering, I completed some MEN projects. I am looking for a job as a Full Stack developer, below i show my project and Skill.
             </motion.p>
 
             {/* <!-- Btn --> */}
             <div className='flex justify-center xl:hidden relative'>
-              <ProjectsBtn />
+              <HomeBtn />
             </div>
             <motion.div
               className='hidden xl:flex'
@@ -43,7 +49,9 @@ export default function Home() {
               initial='hidden'
               animate='show'
               exit='hidden'>
-              <ProjectsBtn />
+              {/* <ProjectsBtn /> */}
+
+              <HomeBtn />
             </motion.div>
           </div>
         </div>
@@ -51,10 +59,39 @@ export default function Home() {
         {/* <!-- Image --> */}
         <div className='w-[1200px] h-full absolute right-0 bottom-0'>
           {/* <!-- BG Image --> */}
-          <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-y-0'></div>
 
-          {/* <!-- particles --> */}
-          {/* <ParticlesContainer /> */}
+          <svg
+            variants={fadeIn('up', 0.2)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='absolute z-5 -top-[252px] -right-[73] animate-pulse'
+            viewBox='0 0 1000 1000'
+            xmlns='http://www.w3.org/2000/svg'>
+            <defs>
+              <linearGradient
+                id='b'
+                gradientTransform='rotate(-75 .5 .5)'>
+                <stop
+                  offset='0%'
+                  stop-color='#4b29f7'
+                />
+                <stop offset='100%' />
+              </linearGradient>
+              <clipPath id='a'>
+                <path
+                  fill='currentColor'
+                  d='M588.5 667Q307 834 300 487.5t281.5-167Q870 500 588.5 667Z'
+                />
+              </clipPath>
+            </defs>
+            <g clip-path='url(#a)'>
+              <path
+                fill='url(#b)'
+                d='M588.5 667Q307 834 300 487.5t281.5-167Q870 500 588.5 667Z'
+              />
+            </g>
+          </svg>
 
           {/* <!-- avatar img --> */}
           <motion.div

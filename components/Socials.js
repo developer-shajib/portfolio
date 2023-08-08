@@ -1,41 +1,36 @@
 import Link from 'next/link.js';
 import { RiYoutubeLine, RiInstagramLine, RiFacebookLine, RiDribbbleLine, RiBehanceLine, RiPinterestLine } from 'react-icons/ri';
+import { BsSkype, BsLinkedin, BsFacebook } from 'react-icons/bs';
+import { FaInstagramSquare } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const link = [
   {
-    url: '',
-    icon: <RiYoutubeLine />
+    url: 'https://www.linkedin.com/in/developer-shajib/',
+    icon: <BsLinkedin />
   },
   {
-    url: '',
-    icon: <RiInstagramLine />
+    url: 'https://join.skype.com/invite/wsEEnti5hAUH',
+    icon: <BsSkype />
   },
   {
-    url: '',
-    icon: <RiFacebookLine />
+    url: 'https://www.facebook.com/sunhailshajib1/',
+    icon: <BsFacebook />
   },
   {
-    url: '',
-    icon: <RiDribbbleLine />
-  },
-  {
-    url: '',
-    icon: <RiBehanceLine />
-  },
-  {
-    url: '',
-    icon: <RiPinterestLine />
+    url: 'https://www.instagram.com/sunhail_shajib/',
+    icon: <FaInstagramSquare />
   }
 ];
 
 const Socials = () => {
   return (
-    <div className='flex items-center gap-x-5 text-lg'>
+    <div className='flex bg-[#ffffff38] px-20 py-4 md:px-0 md:py-0  md:bg-transparent items-center gap-x-5 text-lg'>
       {link.map((item, index) => (
         <Link
           key={index}
           href={item.url}
-          className='hover:text-accent transition-all duration-300'>
+          className='hover:text-accent text-white animate-pulse md:animate-none transition-all duration-300'>
           {item.icon}
         </Link>
       ))}

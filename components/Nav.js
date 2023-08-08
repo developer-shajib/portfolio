@@ -7,16 +7,16 @@ import { usePathname } from 'next/navigation';
 const links = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
+  { name: 'skill', path: '/skill', icon: <HiChatBubbleBottomCenterText /> },
   { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-  { name: 'work', path: '/work', icon: <HiViewColumns /> },
-  { name: 'testimonial', path: '/testimonial', icon: <HiChatBubbleBottomCenterText /> },
+  { name: 'project', path: '/project', icon: <HiViewColumns /> },
   { name: 'contact', path: '/contact', icon: <HiEnvelope /> }
 ];
 
 const Nav = () => {
   const pathname = usePathname();
   return (
-    <nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full  xl:w-16 xl:max-w-md  xl:h-screen '>
+    <nav className='flex flex-col items-center xl:justify-center  fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full  xl:w-16 xl:max-w-md  xl:h-screen '>
       {/* <!-- inner --> */}
       <div className='flex w-full  items-center justify-between xl:justify-center xl:flex-col gap-y-10 xl:gap-y-0  px-4 md:px-40 xl:px-0 h-[80px] bg-white/10 xl:h-max py-8 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full '>
         {links.map((item, index) => {
@@ -41,7 +41,7 @@ const Nav = () => {
           );
         })}
       </div>
-      <i class=' fa-zhihu    '></i>
+      <i className=' fa-zhihu    '></i>
     </nav>
   );
 };

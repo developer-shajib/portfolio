@@ -25,15 +25,15 @@ export default function RootLayout({ children }) {
           <TopLeftImg />
           <Nav />
           <Header />
-          <AnimatePresence mode='wait'>
-            <motion.div
-              className='h-full'
-              key={pathname}>
-              {' '}
-              <Transition />
-              {children}
-            </motion.div>
-          </AnimatePresence>
+          {/* <AnimatePresence mode='wait'> */}
+          <motion.div
+            className='h-full'
+            key={pathname}>
+            {' '}
+            {/* <Transition /> */}
+            {children}
+          </motion.div>
+          {/* </AnimatePresence> */}
         </div>
       </body>
     </html>
