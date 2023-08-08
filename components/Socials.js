@@ -28,6 +28,7 @@ const Socials = () => {
     <div className='flex bg-[#ffffff38] px-20 py-4 md:px-0 md:py-0  md:bg-transparent items-center gap-x-5 text-lg'>
       {link.map((item, index) => (
         <Link
+          target='_blank'
           key={index}
           href={item.url}
           className='hover:text-accent text-white animate-pulse md:animate-none transition-all duration-300'>
