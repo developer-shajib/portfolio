@@ -10,10 +10,10 @@ import { usePathname } from 'next/navigation.js';
 
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora', weight: ['100', '200', '300', '400', '500', '600', '700', '800'] });
 
-export const metadata = {
-  title: 'Developer shajib',
-  description: 'This is a portfolio website of developer shajib.'
-};
+// export const metadata = {
+//   title: 'Developer shajib',
+//   description: 'This is a portfolio website of developer shajib.'
+// };
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
