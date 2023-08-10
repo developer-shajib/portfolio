@@ -23,31 +23,13 @@ const Project = () => {
                 className='h2'>
                 My Project <span className='text-accent'>.</span>
               </motion.h2>
-              {/* <motion.p
-                variants={fadeIn('up', 0.4)}
-                initial='hidden'
-                animate='show'
-                exit='hidden'
-                className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae veritatis quisquam illo, cupiditate quibusdam labore.
-              </motion.p> */}
             </div>
 
             {/* <!-- slider --> */}
 
-            {/* <motion.div
-              variants={fadeIn('down', 0.6)}
-              initial='hidden'
-              animate='show'
-              exit='hidden'
-              className='w-full flex flex-wrap items-center gap-4 justify-center pt-8'> */}
-            {/* <WorkSlider /> */}
-
             <div className='pt-20'>
               <ProjectSlider />
             </div>
-
-            {/* </motion.div> */}
           </div>
         </div>
         <Bulb />
