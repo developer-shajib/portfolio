@@ -1,6 +1,5 @@
 'use client';
 
-import ServiceSlider from '@/components/ServiceSlider.js';
 import Bulb from '@/components/Bulb.js';
 import Circles from '@/components/Circles.js';
 import { motion } from 'framer-motion';
@@ -39,7 +38,6 @@ const Services = () => {
         <Circles />
         <div className='container mx-auto'>
           <div className='flex   flex-col pt-44 lg:pt-0  items-center xl:flex-row xl:justify-around gap-x-4'>
-
             {/* <!-- text --> */}
             <div className='text-center flex  flex-col lg:text-left mb-4 xl:mb-0 '>
               <motion.h2
@@ -71,7 +69,6 @@ const Services = () => {
               animate='show'
               exit='hidden'
               className='flex flex-row flex-wrap md:flex-col gap-4  '>
-          
               {serviceList.map((item, index) => (
                 <div
                   key={index}
