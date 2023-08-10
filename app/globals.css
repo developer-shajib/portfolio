@@ -48,3 +48,11 @@
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
 }
+
+.slick-slide {
+  margin-right: 32px;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+}

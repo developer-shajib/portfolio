@@ -13,8 +13,8 @@ const workSlides = {
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb1.jpg'
+          title: 'Tours & Travels Booking',
+          path: '/Tours-and-Travel-Book.png'
         },
         {
           title: 'title',
@@ -67,9 +67,10 @@ const WorkSlider = () => {
             {slide.images.map((image, index) => (
               <div
                 key={index}
-                className='relative rounded-lg overflow-hidden flex items-center justify-center group'>
+                className='relative rounded-lg overflow-hidden flex items-center justify-center group w-[100%] h-[209px]'>
                 <div className='flex items-center justify-center relative overflow-hidden group'>
                   <Image
+                    className=''
                     src={image.path}
                     width={500}
                     height={300}
@@ -81,7 +82,7 @@ const WorkSlider = () => {
                   <div className='absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20  transition-all duration-300'>
                     <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] '>
                       {/* <!-- title part 1 --> */}
-                      <div className='delay-100'>Live</div>
+                      <div className='delay-100'>{image.title}</div>
                       {/* <!-- title part 2 --> */}
                       <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>Project</div>
                       {/* <!-- icon --> */}
@@ -94,6 +95,7 @@ const WorkSlider = () => {
               </div>
             ))}
           </div>
+          <p className='text-[35px] font-extrabold text-center'>. . .</p>
         </SwiperSlide>
       ))}
     </Swiper>

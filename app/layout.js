@@ -1,12 +1,15 @@
 'use client';
 
 import TopLeftImg from '@/components/TopLeftImg.js';
+
 import './globals.css';
 import { Sora } from 'next/font/google';
 import Nav from '@/components/Nav.js';
 import Header from '@/components/Header.js';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation.js';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora', weight: ['100', '200', '300', '400', '500', '600', '700', '800'] });
 
