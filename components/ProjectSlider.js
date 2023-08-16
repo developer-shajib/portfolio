@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import project1 from '@/public/Tours-and-Travel-Book.png';
 import project2 from '@/public/React-Portfolio.png';
 import project3 from '@/public/developershajib-portfolio.png';
-import { motion } from 'framer-motion';
+import project4 from '@/public/project4.png';
 import { fadeIn } from '@/variants.js';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
@@ -26,6 +26,12 @@ const projectList = [
     link: 'https://developershajib.vercel.app/',
     github: 'https://github.com/developer-shajib/portfolio',
     image: project3
+  },
+  {
+    title: 'Car Showcase & Search',
+    link: 'https://car-showcase-next13-drab.vercel.app',
+    github: 'https://github.com/developer-shajib/Car-Showcase-with-Next-13',
+    image: project4
   }
 ];
 
@@ -64,6 +70,7 @@ const ProjectSlider = () => {
                 View <BsFillArrowRightCircleFill />
               </span>
               <Link
+                target='_blank'
                 href={item?.github}
                 className='flex items-center gap-x-4 z-10 bg-black rounded-lg px-4 py-1 mt-5'>
                 Github <BsFillArrowRightCircleFill />
@@ -72,7 +79,6 @@ const ProjectSlider = () => {
           </Link>
         </div>
       ))}
-      <div className='text-center'>Coming soon</div>
     </Slider>
   );
 };
