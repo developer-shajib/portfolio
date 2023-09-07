@@ -1,9 +1,48 @@
 'use client';
 
 import { fadeIn } from '@/variants.js';
+import axios from 'axios';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
+
+// <!-- Toast Message -->
+const createToastify = (msg, type = 'error') => {
+  toast(msg), { type, position: 'top-center', autoClose: 5000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: true, theme: 'light' };
+};
 
 const Contact = () => {
+  const [input, setInput] = useState({ name: '', email: '', message: '' });
+  const [loading, setLoading] = useState(false);
+
+  // <!-- handle Input change -->
+  const handleInputChange = async (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value });
+  };
+
+  // <!-- handle form submit -->
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    if (!input.name || !input.email || !input.message) {
+      createToastify('All Fields are required!');
+    }
+
+    await axios
+      .post('https://developershajib.vercel.app', input)
+      .then((res) => {
+        createToastify(res.data.message);
+        setLoading(false);
+      })
+      .catch((error) => {
+        createToastify(error.response.data.message);
+
+        setLoading(false);
+      });
+  };
+
   return (
     <>
       <div className='h-full flex flex-col py-[160px] '>
@@ -45,26 +84,37 @@ const Contact = () => {
                 exit='hidden'
                 className=' '>
                 {/* <!-- Contact Form --> */}
-                <form className='flex flex-col gap-5 w-[95%]'>
+                <form
+                  onSubmit={handleFormSubmit}
+                  className='flex flex-col gap-5 w-[95%]'>
                   <input
                     className='rounded-md w-[100%] focus:outline-none px-[23px] py-[5px] text-[17px] bg-[#ffffff29] text-white'
                     type='text'
                     placeholder='Name'
+                    name='name'
+                    value={input.value}
+                    onChange={handleInputChange}
                   />
                   <input
                     className='rounded-md w-[100%] focus:outline-none px-[23px] py-[5px] text-[17px] bg-[#ffffff29] text-white'
                     type='text'
                     placeholder='Email'
+                    name='email'
+                    value={input.email}
+                    onChange={handleInputChange}
                   />
                   <input
                     className='rounded-md w-[100%] focus:outline-none  text-[17px] bg-[#ffffff29] text-white px-[23px] py-[5px] pb-[70px]'
                     type='text'
                     placeholder='Text'
+                    name='message'
+                    value={input.message}
+                    onChange={handleInputChange}
                   />
                   <button
                     className='w-[100%] py-[5] text-[21px]  rounded-md bg-red'
                     type='submit'>
-                    Send
+                    {loading ? 'Processing....' : 'Send'}
                   </button>
                 </form>
               </motion.div>
