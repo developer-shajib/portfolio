@@ -31,7 +31,7 @@ const Contact = () => {
     }
 
     await axios
-      .post('https://developershajib.vercel.app', input)
+      .post('https://developershajib.vercel.app/api/contact', input)
       .then((res) => {
         createToastify(res.data.message);
         setLoading(false);
