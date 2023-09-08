@@ -6,8 +6,6 @@ import project2 from '@/public/React-Portfolio.png';
 import project3 from '@/public/developershajib-portfolio.png';
 import project4 from '@/public/project4.png';
 import project5 from '@/public/portfolioImg/devSocial.png';
-import { fadeIn } from '@/variants.js';
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 const projectList = [
   {
@@ -63,7 +61,7 @@ const ProjectSlider = () => {
           <Image
             src={item.image}
             alt='Project Image'
-            className='object-cover w-full h-full'
+            className=' w-full h-full'
             width={100}
             height={100}
           />
@@ -71,7 +69,6 @@ const ProjectSlider = () => {
           <div className='absolute top-0 left-0 w-full h-full bg-[#00000091] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300'>
             <div className='text-white text-center flex flex-col'>
               <h3 className='text-xl font-medium'>{item.title}</h3>
-              {/* <p className='text-sm'>Project Description</p> */}
 
               <div className='mt-4 flex space-x-2 justify-center '>
                 <Link
