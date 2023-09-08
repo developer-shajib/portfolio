@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactRefresh: false
+  images: {
+    domains: ['res.cloudinary.com']
+  }
 };
 
 module.exports = nextConfig;

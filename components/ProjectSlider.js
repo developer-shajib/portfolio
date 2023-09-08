@@ -1,43 +1,38 @@
 import Image from 'next/image.js';
 import Link from 'next/link.js';
 import Slider from 'react-slick';
-import project1 from '@/public/Tours-and-Travel-Book.png';
-import project2 from '@/public/React-Portfolio.png';
-import project3 from '@/public/developershajib-portfolio.png';
-import project4 from '@/public/project4.png';
-import project5 from '@/public/portfolioImg/devSocial.png';
 
 const projectList = [
   {
     title: 'Tours & Travels Booking using React js',
     link: 'https://tours-and-travels-booking.netlify.app',
     github: 'https://github.com/developer-shajib/Tours-and-Travel-Booking',
-    image: project1
+    image: 'https://res.cloudinary.com/do6dt1ot2/image/upload/v1694168140/Portfolio/Tours-and-Travel-Book_vzr6bg.png'
   },
   {
     title: 'React Portfolio',
     link: 'https://devshajib-portfolio.netlify.app',
     github: 'https://github.com/developer-shajib/Portfolio-with-React/tree/main',
-    image: project2
+    image: 'https://res.cloudinary.com/do6dt1ot2/image/upload/v1694168141/Portfolio/React-Portfolio_exdqdh.png'
   },
   {
     title: 'My Portfolio using Next js',
     link: 'https://developershajib.vercel.app/',
     github: 'https://github.com/developer-shajib/portfolio',
-    image: project3
+    image: 'https://res.cloudinary.com/do6dt1ot2/image/upload/v1694168141/Portfolio/developershajib-portfolio_rfhxnf.png'
   },
   {
     title: 'Car Showcase & Search',
     link: 'https://car-showcase-next13-drab.vercel.app',
     github: 'https://github.com/developer-shajib/Car-Showcase-with-Next-13',
-    image: project4
+    image: 'https://res.cloudinary.com/do6dt1ot2/image/upload/v1694168141/Portfolio/project4_awz7pn.png'
   },
   {
     title: 'Social Media website',
     link: 'https://dev-social-five.vercel.app',
     github: 'https://github.com/developer-shajib/DevSocial.git',
     video: 'https://www.linkedin.com/posts/developer-shajib_uses-features-activity-7105382804879790080-v3Oj?utm_source=share&utm_medium=member_desktop',
-    image: project5
+    image: 'https://res.cloudinary.com/do6dt1ot2/image/upload/v1694168150/Portfolio/devSocial_usph5j.png'
   }
 ];
 
@@ -59,7 +54,7 @@ const ProjectSlider = () => {
           className='relative w-full h-[350px] bg-gray-300 overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform'
           key={index}>
           <Image
-            src={item.image}
+            src={item?.image}
             alt='Project Image'
             className=' w-full h-full'
             width={100}
