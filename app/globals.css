@@ -49,10 +49,11 @@
   }
 }
 
-.slick-slide {
-  margin-right: 32px;
-}
-
 .slick-dots li button:before {
   color: white !important;
+}
+
+.slick-track {
+  display: flex !important;
+  gap: 20px;
 }

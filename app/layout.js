@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={sora.className}>
-        <div className={`page bg-site text-white bg-cover bg-no-repeat `}>
+        <div className={`page bg-site text-white bg-cover bg-no-repeat  `}>
           <ToastContainer />
           <TopLeftImg />
           <Nav />

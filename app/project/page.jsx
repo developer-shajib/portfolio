@@ -20,14 +20,14 @@ const Project = () => {
                 initial='hidden'
                 animate='show'
                 exit='hidden'
-                className='h2'>
-                My Project <span className='text-accent'>.</span>
+                className='text-[25px]'>
+                All My Project <span className='text-accent'>.</span>
               </motion.h2>
             </div>
 
             {/* <!-- slider --> */}
 
-            <div className='pt-20'>
+            <div className='pt-20 px-2 lg:px-16'>
               <ProjectSlider />
             </div>
           </div>
