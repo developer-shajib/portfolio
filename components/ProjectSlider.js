@@ -1,7 +1,7 @@
 import Image from 'next/image.js';
 import Link from 'next/link.js';
 import Slider from 'react-slick';
-import project1 from '@/public/portfolioImg/Client-react-portfiolo.png';
+import project1 from '@/public/portfolioImg/Client-react-portfiolo (2).png';
 import project2 from '@/public/portfolioImg/Car-Showcase.png';
 import project3 from '@/public/portfolioImg/developershajib-portfolio.png';
 import project4 from '@/public/portfolioImg/Tours-and-Travel-Book1.png';
