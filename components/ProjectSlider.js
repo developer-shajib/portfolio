@@ -47,12 +47,10 @@ const ProjectSlider = () => {
   };
   return (
     <Slider
-      className='z-50 '
+      className=' '
       {...settings}>
       {[...projectList]?.reverse().map((item, index) => (
-        <div
-          className='relative w-full h-[350px] bg-gray-300 overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform'
-          key={index}>
+        <div>
           <Image
             src={item?.image}
             alt='Project Image'
@@ -60,36 +58,47 @@ const ProjectSlider = () => {
             width={100}
             height={100}
           />
-
-          <div className='absolute top-0 left-0 w-full h-full bg-[#00000091] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300'>
-            <div className='text-white text-center flex flex-col'>
-              <h3 className='text-xl font-medium'>{item.title}</h3>
-
-              <div className='mt-4 flex space-x-2 justify-center '>
-                <Link
-                  target='_blank'
-                  href={item?.link}
-                  className='bg-slate-950 hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300'>
-                  Link
-                </Link>
-                <Link
-                  target='_blank'
-                  href={item?.github}
-                  className='bg-slate-950  hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300'>
-                  Github
-                </Link>
-                {item?.video && (
-                  <Link
-                    target='_blank'
-                    href={item?.video}
-                    className='bg-slate-950  hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300'>
-                    Video
-                  </Link>
-                )}
-              </div>
-            </div>
-          </div>
         </div>
+        // <div
+        //   className='relative w-full h-[350px]  overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform'
+        //   key={index}>
+        //   <Image
+        //     src={item?.image}
+        //     alt='Project Image'
+        //     className=' w-full h-full'
+        //     width={100}
+        //     height={100}
+        //   />
+
+        //   <div className='absolute top-0 left-0 w-full h-full bg-[#00000091] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300'>
+        //     <div className='text-white text-center flex flex-col'>
+        //       <h3 className='text-xl font-medium'>{item.title}</h3>
+
+        //       <div className='mt-4 flex space-x-2 justify-center '>
+        //         <Link
+        //           target='_blank'
+        //           href={item?.link}
+        //           className='bg-slate-950 hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300'>
+        //           Link
+        //         </Link>
+        //         <Link
+        //           target='_blank'
+        //           href={item?.github}
+        //           className='bg-slate-950  hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300'>
+        //           Github
+        //         </Link>
+        //         {item?.video && (
+        //           <Link
+        //             target='_blank'
+        //             href={item?.video}
+        //             className='bg-slate-950  hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300'>
+        //             Video
+        //           </Link>
+        //         )}
+        //       </div>
+        //     </div>
+        //   </div>
+        // </div>
       ))}
     </Slider>
   );
