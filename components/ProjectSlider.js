@@ -50,7 +50,7 @@ const ProjectSlider = () => {
       className=' '
       {...settings}>
       {[...projectList]?.reverse().map((item, index) => (
-        <div>
+        <div key={index}>
           <Image
             src={item?.image}
             alt='Project Image'
