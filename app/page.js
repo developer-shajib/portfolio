@@ -36,7 +36,7 @@ export default function Home() {
               initial='hidden'
               animate='show'
               exit='hidden'>
-              I am studying in computer science and engineering, I completed some MEN projects. I am looking for a job as a Full Stack developer, below i show my project and Skill.
+              I am studying in computer science and engineering, I completed some MEN projects. I am looking for a job as a Full Stack developer, below i show my project and Skill. For you.
             </motion.p>
 
             {/* <!-- Btn --> */}

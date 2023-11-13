@@ -6,6 +6,7 @@ import project2 from '@/public/portfolioImg/Car-Showcase.png';
 import project3 from '@/public/portfolioImg/developershajib-portfolio.png';
 import project4 from '@/public/portfolioImg/Tours-and-Travel-Book1.png';
 import project5 from '@/public/portfolioImg/devSocial.png';
+import project6 from '@/public/portfolioImg/chat-app-mern.png';
 
 const projectList = [
   {
@@ -39,6 +40,13 @@ const projectList = [
     github: 'https://github.com/developer-shajib/DevSocial.git',
     video: 'https://www.linkedin.com/posts/developer-shajib_uses-features-activity-7105382804879790080-v3Oj?utm_source=share&utm_medium=member_desktop',
     image: project5
+  },
+  {
+    title: 'Chat App',
+    link: 'https://chat-app-with-mern-stack.vercel.app',
+    github: 'https://github.com/developer-shajib/Chat-App-with-MERN-Stack.git',
+    video: 'https://www.linkedin.com/posts/developer-shajib_uses-features-activity-7129863979413229570-SORK?utm_source=share&utm_medium=member_desktop',
+    image: project6
   }
 ];
 
@@ -75,7 +83,7 @@ const ProjectSlider = () => {
                 <Link
                   target='_blank'
                   href={item?.link}
-                  className='bg-slate-950 hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300'>
+                  className='bg-slate-950 hover:bg-red text-white px-3 py-1 rounded-md transition-colors duration-300 '>
                   Link
                 </Link>
                 <Link

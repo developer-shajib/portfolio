@@ -107,7 +107,7 @@ const About = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='max-w-[500px] mx-auto tex-lg md:text-xl text-slate-400 font-semibold xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
+              className='max-w-[500px] mx-auto tex-md md:text-md text-slate-400 font-medium xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
               {`HI, I'm Md Shajibul Islam, a 22-year-old Full Stack MERN Developer and Computer Science student. With two years of experience, I craft dynamic web applications that exceed client expectations. Constantly learning and staying up-to-date with
               the latest technologies, I deliver clean, efficient, and user-centric solutions. When not coding, I enjoy traveling and playing football. Let's collaborate and bring your ideas to life with the power of the MERN stack!`}
             </motion.p>
