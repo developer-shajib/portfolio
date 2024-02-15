@@ -55,4 +55,8 @@ To run this project locally, follow these steps:
    npm run dev
    ```
 
+
 5. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to view the website.
+
+##Live_link (https://developer-shajib-old.vercel.app)
+
